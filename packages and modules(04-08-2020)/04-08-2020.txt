@@ -1,0 +1,52 @@
+Goodmorning to all:
+------------------
+Day objectives:
+
+1.packages and modules
+
+package:
+
+it contains collection of modules
+
+module:
+
+it contains collection of classes and functions
+  
+->it is a .py file
+
+->for accessing modules we are using one keyword
+  "import"
+
+->for accessing module we have few different ways
+
+   - import module
+   - from modulename  import classname(Calsi)
+   - from modulename.classname import methodname
+   
+
+
+
+2.inheritance
+
+aquiring properties from parent class to child class
+
+
+general format for inheritance:
+     class childclass(superclass):
+
+types:
+
+1.single-  only one parent class and at the same 
+           time only one child class
+2.multilevel-one or more parent classes and one or
+           more child classes
+3.multiple- more than one parent classes
+           and one child class
+
+4.hybrid- combination of all single,multilevel,multiple
+5.hierarchical
+
+         class a
+         class b
+         class c
+         class d
