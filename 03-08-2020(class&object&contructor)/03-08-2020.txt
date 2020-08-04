@@ -1,0 +1,40 @@
+Goodmornign to all
+--------------------
+python oops(object oriented programming system)
+
+1.class:
+     it contains collection of variables and 
+     collection of methods.
+
+function:it contains collection of statements
+
+->reusability
+->code optimization
+
+method:if function is existed inside the class
+   then it will be call as a method.
+
+
+syntax:
+   
+class class_name:
+   list of variables
+   list of methods
+
+object:
+
+instance of class
+
+syntax:
+   obj_name=class_name
+
+
+
+
+
+
+
+
+2.object
+3.constructor
+4.inheritance
