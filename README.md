@@ -7,6 +7,8 @@ _____
 #### Day1 Content:
 _____
 - 1.Installation
+  - download python exefile[for 64 bit os click here](https://www.python.org/ftp/python/3.6.6/python-3.6.6-amd64.exe)
+  - download python exefile[for 32 bit os click here](https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe)
 - 2.Function in pYthon 
 - 3.OOP'S in Python
   - Class
@@ -22,6 +24,6 @@ _____
 - 2.Python modues with examples
 - 3.Python Packages with examples
 
-- download python exefile[for 64 bit os click here](https://www.python.org/ftp/python/3.6.6/python-3.6.6-amd64.exe)
-- download python exefile[for 32 bit os click here](https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe)
+- if want to install django package
+    - pip install django
 - Sublime editor linke [click here](https://www.sublimetext.com/3)
