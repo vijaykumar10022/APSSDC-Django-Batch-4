@@ -27,3 +27,29 @@ _____
 - if want to install django package
     - pip install django
 - Sublime editor linke [click here](https://www.sublimetext.com/3)
+
+ ____
+### Day-3(05-08-2020)
+#### Day-3 content:
+_____
+
+- 1.introdution about django
+- 2.MVC, MVT,Architecture of Django
+- 3.Django Installation 
+   - pip install django
+- 4.Project Creation, APP creation and use of
+admin app
+ - note:select project location in localmachine
+  - Project creation Command is 
+    - django-admin startproject projectname
+    - ex:django-admin startproject demo
+  - after creation of project move one step forward 
+      - cd projectname
+      - ex: cd demo
+  - App creation
+      - python manage.py startapp appname
+      - ex:python manage.py startapp myapp
+  - Server Running
+      - python manage.py runserver
+        -->http://127.0.0.1:8000/urlname or localhost:8000/urlname
+        -->ex:http://127.0.0.1:8000/hello or localhost:8000/hello
