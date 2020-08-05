@@ -35,9 +35,7 @@ _____
 
 - 1.introdution about django
 - 2.MVC, MVT,Architecture of Django
-- 3.Django Installation 
-   - pip install django
-- 4.Project Creation, APP creation and use of
+- 3.Project Creation, APP creation and use of
 admin app
  - note:select project location in localmachine
   - Project creation Command is 
