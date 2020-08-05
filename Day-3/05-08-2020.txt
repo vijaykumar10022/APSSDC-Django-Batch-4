@@ -1,0 +1,87 @@
+
+goodmorning to all:
+------------------
+Day Objectives:
+
+1.Django introduction
+
+2.MVC & MVT
+3.Project Creation
+4.App Creation
+
+
+
+
+
+
+
+
+
+MVC(model view controller):
+---------------------------
+M:here we have to write logic realted to databases
+V:here i can write logic for user representation
+C:here i can build logic for both controller and views
+
+MVT(model view template):
+M:it sotres db connections
+V:it will be works like a controller 
+T:templates(.html files)
+
+Project Creation:
+-----------------
+Procedure:
+
+1.first we have to choose a specific location
+
+2.from that location we have to open command prompt
+
+3.in that cmd run a command for creating django project
+
+	i.e "django-admin startproject projectname"
+
+4.when i run this command it will generate two different files
+        -> first one is folder with name of project
+	->manage.py :using this one  we can run the server
+	->__init__:this file consider this project folder also a python file
+	->settings.py:here we will make all project settings
+	->urls.py:we will map our urls
+	->wsgi(web service gateway interface):application hosting purpose
+	->asgi:(asynchronous server gateway interface)
+
+
+App Creation:
+------------
+procedure:
+
+1.before going to create your app first of all you have to check
+   where your manage.py is existed
+
+2.in that location only we are creating user  application
+
+3.in that purpose we are change our directory to manage.py file location
+
+       i.e cd projectname
+
+4.for creating user app we have to run a command 
+
+   	i.e "python manage.py startapp appname"
+
+5.it will generate few files
+
+	-> migrations:it will handle all db connections 
+	->__init__:it will convey to python to create this app is also a 
+		    python
+	->admin.py:we will give permission to admin to acess our models that 
+		    means our db tables
+	->app.py: here we will see our app information
+	->models.py:we will write all db connections
+	->test.py:using this file for testing purpose
+	->views.py:like a controller for controlling all navigations
+ 
+
+
+
+6.after creating app we have to register our app in settings.py
+
+7. python manage.py runserver
