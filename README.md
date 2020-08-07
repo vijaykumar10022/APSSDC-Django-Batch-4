@@ -51,19 +51,63 @@ admin app
       - python manage.py runserver
         -->http://127.0.0.1:8000/urlname or localhost:8000/urlname
         -->ex:http://127.0.0.1:8000/hello or localhost:8000/hello
-  ____
+_________
 ### Day-4(06-08-2020)
 #### Day-4 content:
-_____    
-  - 1 url mapping
-  - 2 Dynamic url mapping
-  - views intraction
- ____
-### Day-5(07-08-2020)
-#### Day-5 content:
-_____
-- Interface between controller(urls.py& views.py files)
-- Http Request and Responses.
-- Django Templates
-- Providing an interface between controller and
-templates
+_________
+
+  - 1. Displaying content by using HttpResponse
+  - 2. Using html,css and javascript in HttpResponse
+      - This changes can be done in single HttpResponse or else we can use it in different HttpResponses
+      - html => views.py
+      - ex: 
+      ```python 
+      def hello(request):
+          return HttpResponse("<h1>Hello Welcome Users</h1>")
+      ```
+      - css => views.py
+      - ex:
+      ```python 
+      def hi(request):
+          return HttpResponse("<h1 style='background-color:black;color:white'>Welcome to Django Session</h1>")
+      ```
+      - javascript => views.py
+      - ex:
+      ```python 
+      def wt(request):
+          return HttpResponse("<script>alert("Welcome User")</script>")
+      ```
+  - 3. Passing 2 or more parameter values in url of a browser and displaying by using HttpResponse
+      - single parameter value passing with data type
+      - single parameter => urls.py
+      - ex: 
+      ```python 
+         path("sg/<int:t>/",views.roll),
+      ```
+      - single parameter => views.py
+      - ex: 
+      ```views.py``` 
+      ```python 
+      def roll(request,t):
+          return HttpResponse("Your roll number is: "+t) 
+      ```
+      - two parameters => urls.py
+      - ex: 
+      ```python 
+         path("sg/<int:t>/<str:na>/",views.roll),
+      ```
+      - two parameters => views.py
+      - ex: 
+      ```views.py``` 
+      ```python 
+      def roll(request,t,na):
+          return HttpResponse("Your roll number is: "+t+"<br>"+"Your name is: "+na) 
+      ```
+      - similarly for n parameters with different data types
+      - string formatting
+      - ex: 
+      ```views.py```
+      ```python
+      def roll(request,t,na):
+          return HttpResponse("Your roll number is: {}\n Your name is: {}".format(t,na))
+          ```
