@@ -51,3 +51,20 @@ admin app
       - python manage.py runserver
         -->http://127.0.0.1:8000/urlname or localhost:8000/urlname
         -->ex:http://127.0.0.1:8000/hello or localhost:8000/hello
+  ____
+### Day-4(06-08-2020)
+#### Day-4 content:
+_____    
+  - 1 url mapping
+  - 2 Dynamic url mapping
+  - views intraction
+ ____
+### Day-5(07-08-2020)
+#### Day-5 content:
+_____
+
+- Interface between controller(urls.py& views.py files)
+- Http Request and Responses.
+- Django Templates
+- Providing an interface between controller and
+templates
