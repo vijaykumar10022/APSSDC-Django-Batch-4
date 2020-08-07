@@ -56,8 +56,8 @@ _________
 #### Day-4 content:
 _________
 
-  - 1. Displaying content by using HttpResponse
-  - 2. Using html,css and javascript in HttpResponse
+  - 1.Displaying content by using HttpResponse
+  - 2.Using html,css and javascript in HttpResponse
       - This changes can be done in single HttpResponse or else we can use it in different HttpResponses
       - html => views.py
       - ex: 
@@ -77,7 +77,7 @@ _________
       def wt(request):
           return HttpResponse("<script>alert("Welcome User")</script>")
       ```
-  - 3. Passing 2 or more parameter values in url of a browser and displaying by using HttpResponse
+  - 3.Passing 2 or more parameter values in url of a browser and displaying by using HttpResponse
       - single parameter value passing with data type
       - single parameter => urls.py
       - ex: 
