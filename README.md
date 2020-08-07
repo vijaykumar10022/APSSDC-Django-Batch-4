@@ -62,7 +62,6 @@ _____
 ### Day-5(07-08-2020)
 #### Day-5 content:
 _____
-
 - Interface between controller(urls.py& views.py files)
 - Http Request and Responses.
 - Django Templates
