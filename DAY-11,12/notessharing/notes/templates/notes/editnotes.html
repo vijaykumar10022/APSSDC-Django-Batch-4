@@ -1,0 +1,54 @@
+{% extends 'notes/navbar.html'%}
+{% load static%}
+{% block content %}
+
+<div class="container col-md-4  bg-success rounded">
+
+	<h1 class="text-center">EditNotes</h1>
+
+	<form action="{% url  'editnotes' docs.id %}" method="POST" enctype="multipart/form-data"class="m-4">
+		{% csrf_token %}
+		<div class="form-group row">
+			<label>Branch</label>
+			CSE :<input type="radio" name="branch" value="cse" {% if docs.branch %}checked{% endif %}>
+			ECE :<input type="radio" name="branch" value="ece" {% if docs.branch %}checked{% endif %}>
+			EEE :<input type="radio" name="branch" value="eee" {% if docs.branch %}checked{% endif %}>
+			MEC :<input type="radio" name="branch" value="mec" {% if docs.branch %}checked{% endif %}>
+			
+		</div>
+		
+ 		<!-- <div class="form-group">
+ 			<label>Branch</label>
+ 			<select class="form-control" value="{{docs.branch}}" name="branch">
+ 				<option value='cse'{{ "selected='selected'"}} {%if docs.branch == 'cse' %} {% endif %}>cse</option>
+
+ 				<option value='ece'{{ "selected='selected'"}} {%if docs.branch == 'ece' %} {% endif %}>ece</option>
+
+ 				<option value='eee'{{ "selected='selected'"}} {%if docs.branch == 'eee' %} {% endif %}>eee</option>
+
+ 				<option value='mec'{{ "selected='selected'"}} {%if docs.branch == 'mec' %} {% endif %}>mec</option>
+ 			</select>
+ 		</div> -->
+
+
+		<div class="form-group">
+			<label>Subject</label>
+			<input type="text" name="subject" value="{{docs.subject}}" class=" form-control"placeholder="Enter Sub" required>
+		</div>
+
+		<div class="form-group">
+			<label>Notes</label>
+			<p>Currently:<a href="{{docs.notes.url}}">{{docs.notes}}</a></p>
+			<input type="file" name="material"class="form-control" value="{{docs.material}}">
+		</div>
+		<div class="form-group">
+			<label>Description</label>
+			<input class="form-control" name="description"  value="{{docs.description}}">
+		</div>
+
+		<div class="text-center">
+			<input type="submit" value="Update" class="btn btn-outline-warning btn-lg">
+		</div>
+	</form>
+</div>
+{% endblock %}

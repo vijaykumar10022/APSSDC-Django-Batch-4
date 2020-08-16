@@ -1,0 +1,42 @@
+{% extends 'notes/navbar.html'%}
+
+{% block content %}
+
+<div class="container col-md-4  bg-info rounded">
+
+	<h1 class="text-center">AddNotes</h1>
+
+	<form action="#" method="POST" enctype="multipart/form-data"class="m-4">
+		{% csrf_token %}
+		<div class="form-group">
+			<label>Branch</label>
+			<select class="form-control" name="branch" required>
+				<option>---</option>
+				<option value="CSE">CSE</option>
+				<option value="ECE">ECE</option>
+				<option value="EEE">EEE</option>
+				<option value="MEC">MEC</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>Subject</label>
+			<input type="text" name="subject"  class="form-control"placeholder="Enter Sub" required>
+		</div>
+
+		<div class="form-group">
+			<label>Notes</label>
+			<input type="file" name="notes"  class="form-control"placeholder="Upload File" required>
+		</div>
+
+		<div class="form-group">
+			<label>Description</label>
+			<textarea class="form-control" name="description" rows="5"></textarea>
+		</div>
+
+		<div class="text-center">
+			<input type="submit" value="Add" class="btn btn-outline-danger btn-lg">
+		</div>
+	</form>
+</div>
+{% endblock %}

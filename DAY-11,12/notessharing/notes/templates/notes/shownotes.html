@@ -1,0 +1,38 @@
+{% extends 'notes/navbar.html'%}
+
+{% block content%}
+
+<div class="container">
+	<table class=" table table-bordered table-hover table-primary">
+		<thead>
+			<tr class="bg-info">
+			<th>Id</th>
+			<th>Branch</th>
+			<th>subject</th>
+			<th>Notes</th>
+			<th>Description</th>
+			<th>UploadingDate</th>
+			<th colspan="2">Opertions</th>
+		</tr>
+		</thead>
+		<tbody>
+			{% for i in notes %}
+			<tr>
+				<td>{{i.id}}</td>
+				<td>{{i.branch}}</td>
+				<td>{{i.subject}}</td>
+				<td><a href="{{i.notes.url}}" download>{{i.notes}}</a></td>
+				<td>{{i.description}}</td>
+				<td>{{i.uploadingdate}}</td>
+				<td>
+					<a href="{% url 'editnotes' i.id%}" class="btn btn-outline-success btn-md">Edit</a>
+				</td>
+				<td>
+					<a href="" class="btn btn-outline-danger btn-md">Delete</a>
+				</td>
+			</tr>
+		</tbody>
+		{% endfor %}
+	</table>
+</div>
+{% endblock%}
