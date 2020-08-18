@@ -1,0 +1,59 @@
+{% extends 'notes/navbar.html'%}
+{% load static%}
+{% block content %}
+
+<div class="container col-md-4  bg-success rounded">
+	<h1 class="text-center">EditNotes</h1>
+	<form action="" method="POST" enctype="multipart/form-data"class="m-4">
+		{% csrf_token %}
+
+		<div class="form-group">
+			<label>Branch</label>
+			<select class="form-control" value="{{docs.branch}}" name="branch">
+				<option value='{{docs.branch}}' {%if docs.branch == 'CSE' %} {% endif %}>{{docs.branch}}</option>
+
+				<option value='CSE' class='branch-options'>CSE</option>
+
+ 				<option value='ECE' class='branch-options'>ECE</option>
+
+ 				<option value='EEE' class='branch-options'>EEE</option>
+
+ 				<option value='MECH'class='branch-options'>MECH</option>
+ 			</select>
+ 		</div>
+ 		
+		<div class="form-group">
+			<label>Subject</label>
+			<input type="text" name="subject" value="{{docs.subject}}" class=" form-control"placeholder="Enter Sub" required>
+		</div>
+
+		<div class="form-group">
+			<label>Notes</label>
+			<p>Currently:<a href="{{docs.notes.url}}">{{docs.notes}}</a></p>
+			<input type="file" name="notes"class="form-control">
+		</div>
+		<div class="form-group">
+			<label>Description</label>
+			<input class="form-control" name="description"  value="{{docs.description}}">
+		</div>
+		<div class="form-group">
+			<label>UploadingDate</label>
+			<input type="date" class="form-control" name="uploadingdate"  value="{{docs.uploadingdate}}">
+		</div>
+
+		<div class="text-center">
+			<input type="submit" value="Update" class="btn btn-outline-warning btn-lg">
+		</div>
+	</form>
+</div>
+{% endblock %}
+<!-- <script type="text/javascript">
+	branchOption=document.getElementsByClassName('branch-options').value;
+	console.log(branchOption)
+	if (branchOption=={{docs.barnch}}){
+		branchOption.style.display = "none";
+	}
+	else{
+		console.log("Not Executed if block")
+	}
+</script> -->

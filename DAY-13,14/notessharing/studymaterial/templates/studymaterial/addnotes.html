@@ -1,0 +1,15 @@
+{% extends 'studymaterial/navbar.html'%}
+{% block content%}
+	<!-- <h4 style="padding: 2%; font-size: 50px; text-align: center;"><span style="color: red">Study</span><span style="color: green;">Materials</span>
+  </h4> -->
+	<div class="container">
+		<h1>AddMaterial</h1>
+		<form action="#" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			{{form.as_p}} <!-- Paragraph -->
+
+			<input type="submit" value="Add" class="btn btn-outline-primary btn-lg">
+		</form>
+	</div>
+{% endblock%}

@@ -1,0 +1,18 @@
+{% extends 'notes/navbar.html'%}
+
+{% block content %}
+
+<div class="container">
+	<div class="card">
+		<form action="{% url 'deletenotes' data.id %}" method="POST">
+			{% csrf_token %}
+			<div class="card-body">
+
+			<h1>Are You Sure you want to delete <span style="color: blue">{{data.subject}}</span></h1>
+			</div>
+			<input type="Submit" value="Delete" class="btn btn-outline-danger">
+			<a href="{% url 'shownotes' %}" class="btn btn-outline-warning">Cancel</a>
+		</form>
+	</div>
+</div>
+{% endblock %}

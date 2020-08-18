@@ -1,0 +1,39 @@
+{% extends 'studymaterial/navbar.html'%}
+
+{% block content%}
+<div class="container">
+	<h1 class="text-center" style="color: red"><u>ModelForms</u></h1>
+	<table class=" table table-bordered table-hover table-primary">
+		<thead>
+			<tr class="bg-info">
+			<th>Id</th>
+			<th>Branch</th>
+			<th>subject</th>
+			<th>Materials</th>
+			<th>Description</th>
+			<th>UploadingDate</th>
+			<th colspan="2">Opertions
+				<a href="{% url 'addmaterial' %}" class="btn  btn-danger button btn-sm float-right blinking id4" title="AddNotes" style="border-radius: 50%;">addmaterial</a></th>
+		</tr>
+		</thead>
+		<tbody>
+			{% for i in data %}
+			<tr>
+				<td>{{i.id}}</td>
+				<td>{{i.branch}}</td>
+				<td>{{i.subject}}</td>
+				<td><a href="{{i.material.url}}" download>{{i.material}}</a></td>
+				<td>{{i.description}}</td>
+				<td>{{i.uploadingdate}}</td>
+				<td>
+					<a href="{% url 'editmaterial' i.id%}" class="btn btn-outline-success btn-md">Edit</a>
+				</td>
+				<td>
+					<a href="{% url 'deletematerial' i.id %}" class="btn btn-outline-danger btn-md">Delete</a>
+				</td>
+			</tr>
+		</tbody>
+		{% endfor %}
+	</table>
+</div>
+{% endblock%}
